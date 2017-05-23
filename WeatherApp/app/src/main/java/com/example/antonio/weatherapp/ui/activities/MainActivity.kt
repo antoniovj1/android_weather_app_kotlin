@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import com.example.antonio.weatherapp.domain.commands.RequestForecastCommand
 import com.example.antonio.weatherapp.domain.model.Forecast
 import com.example.antonio.weatherapp.ui.adapters.ForecastListAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.find
 import org.jetbrains.anko.toast
@@ -18,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val forecastList: RecyclerView = find(R.id.forecast_list)
         forecastList.layoutManager = LinearLayoutManager(this)
 
         doAsync {
