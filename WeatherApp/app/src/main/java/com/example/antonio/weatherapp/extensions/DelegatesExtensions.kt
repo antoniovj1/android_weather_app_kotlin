@@ -1,10 +1,11 @@
-package com.example.antonio.weatherapp.ui.utils
-
-import kotlin.reflect.KProperty
+package com.example.antonio.weatherapp.extensions
 
 /**
  * Created by antonio on 24/05/17.
  */
+
+
+import kotlin.reflect.KProperty
 
 object DelegatesExt {
     fun <T> notNullSingleValue() = NotNullSingleValueVar<T>()

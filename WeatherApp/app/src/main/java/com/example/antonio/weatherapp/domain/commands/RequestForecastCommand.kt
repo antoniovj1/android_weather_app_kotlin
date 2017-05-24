@@ -1,6 +1,6 @@
 package com.example.antonio.weatherapp.domain.commands
 
-import com.example.antonio.weatherapp.data.ForecastRequest
+import com.example.antonio.weatherapp.data.server.ForecastRequest
 import com.example.antonio.weatherapp.domain.mappers.ForecastDataMapper
 import com.example.antonio.weatherapp.domain.model.ForecastList
 
@@ -9,9 +9,9 @@ import com.example.antonio.weatherapp.domain.model.ForecastList
  */
 
 
-class RequestForecastCommand(private val zipCode: String) : Command<ForecastList> {
+class RequestForecastCommand(private val zipCode: Long) : Command<ForecastList> {
     override fun execute(): ForecastList {
         val forecastRequest = ForecastRequest(zipCode)
-        return ForecastDataMapper().convertFromDataModel(forecastRequest.execute())
+        return ForecastDataMapper().convertFromDataModel(zipCode, forecastRequest.execute())
     }
 }

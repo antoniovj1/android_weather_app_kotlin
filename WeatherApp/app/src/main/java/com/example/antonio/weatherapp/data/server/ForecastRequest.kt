@@ -1,5 +1,6 @@
-package com.example.antonio.weatherapp.data
+package com.example.antonio.weatherapp.data.server
 
+import com.example.antonio.weatherapp.data.ForecastResult
 import com.google.gson.Gson
 import java.net.URL
 
@@ -8,7 +9,7 @@ import java.net.URL
  */
 
 
-class ForecastRequest(val zipCode: String) {
+class ForecastRequest(val zipCode: Long) {
 
     companion object {
         private val APP_ID = "15646a06818f61f7b8d7823ca833e1ce"

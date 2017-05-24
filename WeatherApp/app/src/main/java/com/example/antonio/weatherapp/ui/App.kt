@@ -1,7 +1,7 @@
 package com.example.antonio.weatherapp.ui
 
 import android.app.Application
-import com.example.antonio.weatherapp.ui.utils.DelegatesExt
+import com.example.antonio.weatherapp.extensions.DelegatesExt
 
 /**
  * Created by antonio on 24/05/17.
